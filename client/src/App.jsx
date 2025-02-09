@@ -1,7 +1,21 @@
-import React from "react";
+import { Outlet } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
 
 const App = () => {
-  return <h1>Book Direct Hotel App</h1>;
+  return (
+    <>
+      <Header />
+      <main className="py3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+
+      <Footer />
+    </>
+  );
 };
 
 export default App;
